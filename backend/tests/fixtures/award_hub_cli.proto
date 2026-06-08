@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package award_hub;
+
+service AwardHub {
+    rpc GetAward (AwardRequest) returns (AwardResponse);
+}
+
+message AwardRequest {
+    int32 award_id = 1;
+}
+
+message AwardResponse {
+    int32 code = 1;
+    string msg = 2;
+}
